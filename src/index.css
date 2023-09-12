@@ -11,6 +11,18 @@
   padding: 0;
 }
 
+.blueBg {
+  background-color: rgb(186, 73, 73);
+}
+
+.greenBg {
+  background-color: rgb(14, 118, 167);
+}
+
+.blackBg {
+  background-color: rgb(14, 75, 84);
+}
+
 .timerContainer {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px 0px 30px;

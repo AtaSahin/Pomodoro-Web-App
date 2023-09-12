@@ -26,23 +26,43 @@ const ShortBreak = () => {
 
     return () => clearInterval(intervalId);
   }, [isRunning, minutes, seconds]);
-
+  const handleStop = () => {
+    if (isRunning) {
+      setMinutes(15);
+      setSeconds(0);
+      setIsRunning(true);
+    }
+  };
   const handleStart = () => {
     if (!isRunning) {
-      setMinutes(5); // Set initial minutes
-      setSeconds(0); // Set initial seconds
+      setMinutes(5);
+      setSeconds(0);
       setIsRunning(true);
     }
   };
 
   return (
-    <div>
-      <h1>{`${minutes.toString().padStart(2, "00")}:${seconds
+    <div className="timerContainer1">
+      <h1 className="timerText">{`${minutes
         .toString()
-        .padStart(1, "5")}`}</h1>
-      <button onClick={handleStart} disabled={isRunning}>
-        Start
-      </button>
+        .padStart(2, "00")}:${seconds.toString().padStart(1, "5")}`}</h1>
+      {!isRunning ? (
+        <button
+          className="startButton"
+          onClick={handleStart}
+          disabled={isRunning}
+        >
+          Start
+        </button>
+      ) : (
+        <button
+          className="pauseButton"
+          onClick={handleStop}
+          disabled={!isRunning}
+        >
+          Restart
+        </button>
+      )}
     </div>
   );
 };

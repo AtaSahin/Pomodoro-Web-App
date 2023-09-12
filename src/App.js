@@ -24,14 +24,13 @@ function App() {
     setActive(false);
     setActive1(false);
   };
-  let show;
-  function timerShow() {
-    if (!active) {
-      show = <PomodoroTimer></PomodoroTimer>;
-    }
-  }
+
   return (
-    <div className="App">
+    <div
+      className={`App ${active ? "blueBg" : ""} ${active1 ? "greenBg" : ""} ${
+        active2 ? "blackBg" : ""
+      }`}
+    >
       <div className="timerContainer">
         <div className="timerTabs">
           <button
