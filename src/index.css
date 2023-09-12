@@ -6,6 +6,11 @@
   transition: background-color 0.5s ease-in-out 0s;
   padding-top: 10%;
 }
+.header {
+  margin-top: -370px;
+  margin-left: 90px;
+  display: flex;
+}
 * {
   margin: 0;
   padding: 0;
@@ -55,4 +60,25 @@
   color: white;
   opacity: 1;
   font-weight: bold;
+}
+
+.loginButton {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.9;
+  background: none rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  margin-left: 10px;
+  font-size: 13px;
+  padding: 8px 12px;
+  min-width: 70px;
+  border: none;
+  color: white !important;
+  margin-left: 500px;
 }

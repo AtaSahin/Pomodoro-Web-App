@@ -83,6 +83,10 @@ function App() {
           </p>
         )}
       </div>
+      <div className="header">
+        <h1>Pomodoro App</h1>
+        <button className="loginButton">Login</button>
+      </div>
     </div>
   );
 }
