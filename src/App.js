@@ -3,6 +3,14 @@ import index from "./index.css";
 import PomodoroTimer from "./components/PomodoroTimer";
 import LongBreak from "./components/LongBreak";
 import ShortBreak from "./components/ShortBreak";
+import Navbar from "./components/Navbar";
+import LoginPage from "./pages/LoginPage";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Routes,
+} from "react-router-dom";
 
 function App() {
   const [active, setActive] = useState(true);
@@ -31,6 +39,11 @@ function App() {
         active2 ? "blackBg" : ""
       }`}
     >
+      <Navbar />
+      <Routes>
+        <Route path="/loginpage" component={LoginPage} />
+        {/* Other routes */}
+      </Routes>
       <div className="timerContainer">
         <div className="timerTabs">
           <button
@@ -44,6 +57,7 @@ function App() {
           >
             Pomodoro
           </button>
+
           <button
             className="tabText"
             onClick={handleClick1}
@@ -83,10 +97,7 @@ function App() {
           </p>
         )}
       </div>
-      <div className="header">
-        <h1>Pomodoro App</h1>
-        <button className="loginButton">Login</button>
-      </div>
+      <div className="header"></div>
     </div>
   );
 }

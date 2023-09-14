@@ -7,9 +7,10 @@
   padding-top: 10%;
 }
 .header {
-  margin-top: -370px;
-  margin-left: 90px;
+  align-items: center;
+  justify-content: center;
   display: flex;
+  margin-top: -380px;
 }
 * {
   margin: 0;
@@ -65,7 +66,7 @@
 .loginButton {
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
@@ -81,4 +82,32 @@
   border: none;
   color: white !important;
   margin-left: 500px;
+}
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: -40px;
+}
+.nav a {
+  color: inherit;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+.siteLogo {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.nav li.active {
+  background-color: #555;
+}
+.nav li:hover {
+  background-color: #777;
 }
